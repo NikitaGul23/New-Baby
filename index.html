@@ -392,7 +392,111 @@
             }
         }
         
-        
+        .choose-us-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px;
+            background-color: #f9f9f9;
+            text-align: center;
+            flex-wrap: wrap;
+            animation: fadeInSection 1.5s ease-in-out;
+        }
+
+        .choose-us-content {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .choose-us-content h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .choose-us-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .choose-us-content button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #ff5722;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: buttonBounce 2s infinite ease-in-out;
+        }
+
+        .choose-us-content button:hover {
+            background-color: #e64a19;
+            transform: scale(1.1);
+        }
+
+        .choose-us-image {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeInRight 1s ease;
+        }
+
+        .choose-us-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .choose-us-image img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInSection {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes buttonBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
 
 
 
@@ -557,7 +661,29 @@
         .about-content button:hover {
             background-color: #e64a19;
         }
-        
+        .choose-us-section {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+                padding-left: 5px; /* Adds 20px of space to the left */
+                padding-right: 5px;
+              
+            }
+
+            .choose-us-image {
+                order: -1;
+            }
+
+            .choose-us-image img {
+                width: 80%;
+                max-width: 100%;
+                margin: 0 auto 0px;
+            }
+
+            .choose-us-content {
+                text-align: left;
+                padding: 0px 10px;
+            }
 
 
 
@@ -620,7 +746,7 @@
     <div class="service">
         <img src="https://i.ibb.co/C5wdFnT/IMG-9720.jpg" alt="Service 4">
         <div class="service-content">
-            <h3>Emergecny Storm Damage</h3>
+            <h3>Emergency Storm Damage</h3>
             <p>When unexpected storm damage strikes, fast and reliable cleanup is crucial to restore safety and order to your property. Count on our emergency storm damage services for prompt response and expert care to minimize stress and protect your home.</p>
         </div>
     </div>
@@ -665,6 +791,17 @@
             in the world through our work. Join us on this exciting journey!
         </p>
         <button>Learn More</button>
+    </div>
+</section>
+<section class="choose-us-section">
+    <div class="choose-us-content">
+        <h2>Why Choose Us?</h2>
+        <p>We are dedicated to providing exceptional quality, unmatched reliability, and innovative solutions tailored to your unique needs. Our team of professionals is passionate about delivering results that exceed expectations.</p>
+        <p>With years of experience and a commitment to excellence, we ensure that every project is executed with precision and care. Choose us for a partnership that drives success.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="choose-us-image">
+        <img src="https://i.ibb.co/3ywxHPK/IMG-8189.jpg" alt="Why Choose Us">
     </div>
 </section>
 
