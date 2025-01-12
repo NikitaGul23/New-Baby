@@ -247,7 +247,7 @@
         }
 
         .service:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .service-content {
@@ -296,8 +296,9 @@
             }
         }
 
+
         @media (min-width: 769px) {
-            .service {
+                .service {
                 gap: 60px;
             }
 
@@ -314,7 +315,7 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 50px;
+            padding: 40px;
             background-color: #f4f4f4;
             gap: 20px;
             overflow: hidden;
@@ -401,7 +402,7 @@
 
 
         /* Responsive Design  Iphone*/
-        @media (max-width: 700px) {
+        @media (max-width: 769px) {
              
              .navbar {
             position: sticky;
@@ -425,7 +426,7 @@
         .navbar a {
             color: black;
             text-decoration: none;
-            padding: 14px 10px;
+            padding: 14px 12px;
             display: block;
             text-align: center;
             font-size: 17px;
@@ -488,8 +489,13 @@
 
             .service img {
                 width: 80%;
-                margin: 0 auto 20px;
+                margin: 0 auto 10px;
             }
+
+        .service:hover {
+            transform: scale(1);
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+        }
            
            
         .about-section {
@@ -664,4 +670,3 @@
 
 </body>
 </html>
-        
