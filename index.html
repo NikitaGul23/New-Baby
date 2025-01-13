@@ -316,21 +316,21 @@
             justify-content: center;
             flex-wrap: wrap;
             padding: 40px;
-            background-color: #f4f4f4;
+            background-color: #FF570C;
             gap: 20px;
             overflow: hidden;
         }
 
         .about-image {
             flex: 1;
-            min-width: 300px;
-            max-width: 500px;
+            min-width: 400px;
+            max-width: 600px;
             animation: fadeInLeft 1.5s ease-in-out;
         }
 
         .about-image img {
             width: 100%;
-            max-height: 400px;
+            max-height: 450px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -495,6 +495,167 @@
             }
             50% {
                 transform: translateY(-5px);
+            }
+        }
+
+        .video-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 70px;
+            background-color: #FF570C;
+            flex-wrap: wrap;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-container video:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .description-container {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeInRight 1s ease;
+        }
+
+        .description-container h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .description-container h2:hover {
+            color: #ffffff;
+        }
+
+        .description-container p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #000000;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .description-container p:hover {
+            color: #ffffff;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .video-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding: 70px;
+            background-color: #FF570C;
+            flex-wrap: wrap;
+        }
+
+        .video-container {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-container iframe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .description-container {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+            animation: fadeInRight 1s ease;
+        }
+
+        .description-container h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .description-container h2:hover {
+            color: #ffffff;
+        }
+
+        .description-container p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #000000;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .description-container p:hover {
+            color: #ffffff;
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
             }
         }
 
@@ -685,7 +846,44 @@
                 padding: 0px 10px;
             }
 
+            .video-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
 
+            .video-container {
+                order: -1;
+            }
+
+            .video-container video {
+                width: 100%;
+                margin-left: -5%;
+            }
+
+            .description-container {
+                text-align: left;
+                padding: 0 10px;
+            }
+            .video-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .video-container {
+                order: -1;
+            }
+
+            .video-container iframe {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .description-container {
+                text-align: left;
+                padding: 0 10px;
+            }
 
 
     </style>
@@ -802,6 +1000,16 @@
     </div>
     <div class="choose-us-image">
         <img src="https://i.ibb.co/3ywxHPK/IMG-8189.jpg" alt="Why Choose Us">
+    </div>
+</section>
+<section class="video-section">
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/9HR7q7piD9k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="description-container">
+        <h2>Watch Our Story</h2>
+        <p>Discover how we began our journey and what drives us to deliver exceptional services every day. Our story is one of passion, innovation, and dedication to our clients.</p>
+        <p>Join us as we continue to create solutions that make a difference and help shape a better future.</p>
     </div>
 </section>
 
